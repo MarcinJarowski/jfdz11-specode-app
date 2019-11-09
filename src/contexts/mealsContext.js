@@ -15,53 +15,16 @@ const MealsContextProvider = props => {
   const [commonMealsForAll, setCommonMealsForAll] = useState([]);
   const [concatedCommonAndCustom, setConcatedCommonAndCustom] = useState([]);
 
-  useEffect(() => {
-    console.log(commonMealsForAll);
-    console.log("common for all ^^");
-    console.log(concatedCommonAndCustom);
-    console.log("concated ^^");
-    console.log(userScheduledMeals);
-    console.log("scheduled meals ^^");
-    console.log(userCustomMealsArray);
-    console.log("custom meals ^^");
-  }, [
-    commonMealsForAll,
-    concatedCommonAndCustom,
-    userScheduledMeals,
-    userCustomMealsArray
-  ]);
-
-  useEffect(
-    userId => {
-      console.log(userScheduledMeals);
-      console.log("scheduled meals ^^");
-
-      // firebase
-      //   .database()
-      //   .ref("scheduledMeals/" + userId) ///po pierwszym pobraniu nie powinno ustawiac tego samego
-      //   .set({
-      //     userScheduledMeals
-      //   });
-    },
-    [userScheduledMeals]
-  );
-
-  useEffect(
-    userId => {
-      console.log(userCustomMealsArray);
-      console.log("custom meals ^^");
-      setConcatedArray();
-
-      // firebase
-      //   .database()
-      //   .ref("customMeals/" + userId)
-      //   .set({
-      //     userCustomMealsArray
-      //   });
-    },
-    [userCustomMealsArray]
-  );
-
+  useEffect(()=>{
+console.log(userScheduledMeals);
+console.log('user scheduled ^^')
+console.log(userCustomMealsArray);
+console.log('user Custom ^^')
+console.log(commonMealsForAll);
+console.log('common4all ^^');
+console.log(concatedCommonAndCustom);
+console.log('concated ^^')
+  }, [userCustomMealsArray, userScheduledMeals, commonMealsForAll, concatedCommonAndCustom])
   const setUserCustomMeals = userId => {
     firebase
       .database()
@@ -120,6 +83,7 @@ const MealsContextProvider = props => {
 
   const setConcatedArray = () => {
     setConcatedCommonAndCustom([...commonMealsForAll, ...userCustomMealsArray]);
+    debugger;
   };
 
   return (

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect } from "react";
 import Select from "react-select";
 import styles from "./MealsSearch.module.css";
 import { MealsContext } from "../../contexts/mealsContext";
@@ -7,7 +7,7 @@ const { selectWrapper } = styles;
 
 const MealsSearch = props => {
   const { concatedCommonAndCustom } = useContext(MealsContext);
-
+  // const {} =
   let concatedMealsToArray = Object.values(concatedCommonAndCustom);
   let mapWithLabelAtt = concatedMealsToArray.map(obj => {
     obj.label = obj.name;
