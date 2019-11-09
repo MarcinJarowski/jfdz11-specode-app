@@ -83,7 +83,6 @@ console.log('concated ^^')
 
   const setConcatedArray = () => {
     setConcatedCommonAndCustom([...commonMealsForAll, ...userCustomMealsArray]);
-    debugger;
   };
 
   return (

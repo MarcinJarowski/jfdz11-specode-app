@@ -1,0 +1,46 @@
+.profilePageWrapper{
+    display: flex;
+    flex-direction: column;
+    max-width: 80vw;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+.profilePicWrapper{
+    max-width: 30vw;
+    max-height: 30vw;
+    min-height: 30vw;
+    min-width: 30vw;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 3vw;
+}
+.profilePic{
+    /* max-width: 100%; */
+    max-height: 30vw;
+    min-width: 30vw;
+    min-height: 30vw;
+    object-fit: contain;
+}
+.emailAddress{
+    color: white;
+    font-size: 24px;
+    margin-top: 2vw;
+}
+.button{
+    padding: 6px 10px;
+    margin-top: 1vw;
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 1vw;
+}
+.button:hover{
+    cursor: pointer;
+}
+.paragraph{
+    color: white;
+    padding: 10px;
+}
+.paragraph:hover{
+    cursor: pointer;
+}

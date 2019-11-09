@@ -8,7 +8,8 @@ const Navigation = props => {
   const {
     changeIsLoggedIn,
     userIsLoggedIn: isLoggedIn,
-    userFirstName
+    userFirstName,
+    setAccountCreationAndLastLoginDate
   } = useContext(UserContext);
   const { navLoggedIn, navLoggedOut, navLink } = styles;
   let navId = isLoggedIn ? navLoggedIn : navLoggedOut;
@@ -27,7 +28,7 @@ const Navigation = props => {
       ) : null}
       <li>
         {isLoggedIn ? (
-          <NavLink className={navLink} exact to="/profile">
+          <NavLink onClick={()=>setAccountCreationAndLastLoginDate()} className={navLink} exact to="/profile">
             Profil
           </NavLink>
         ) : (
